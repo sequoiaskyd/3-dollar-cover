@@ -1,0 +1,11 @@
+# Never commit secrets or keys
+keys/
+*.pem
+*.key
+*.crt
+*_rsa
+id_*
+.env
+.env.*
+.DS_Store
+Thumbs.db
