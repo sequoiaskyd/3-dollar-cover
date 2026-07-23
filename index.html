@@ -151,6 +151,13 @@ header.scrolled{
   content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
   background:radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,.55) 100%);
 }
+/* giant $3 watermark, pinned to the viewport so it stays put while scrolling */
+.hero-ghost{
+  position:fixed; z-index:0; top:50%; left:50%; transform:translate(-50%,-50%);
+  font-family:var(--f-display); font-size:min(60vw,760px); line-height:.8;
+  color:rgba(233,220,195,.05); letter-spacing:-.04em; white-space:nowrap;
+  pointer-events:none; user-select:none;
+}
 .hero-inner{ position:relative; z-index:3; max-width:760px; }
 .hero-logo{
   width:min(560px, 86vw); margin:0 auto 34px;
@@ -435,6 +442,7 @@ footer{ background:var(--ink); border-top:1px solid var(--ink-3); padding:56px 0
 
 <!-- ============================ HERO ============================ -->
 <section class="hero" id="top">
+  <div class="hero-ghost" aria-hidden="true">$3</div>
   <div class="hero-inner">
     <!-- Drop your raven banknote art at assets/logo.png. If missing, a text crest shows instead. -->
     <img class="hero-logo" src="assets/logo.png" alt="$3 Cover raven banknote emblem"
