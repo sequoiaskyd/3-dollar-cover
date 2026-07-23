@@ -147,8 +147,8 @@ header.scrolled{
   min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
   text-align:center; padding:120px 20px 70px; position:relative; overflow:hidden;
 }
-.hero::before{ /* warm red stage glow */
-  content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+.hero::before{ /* warm red stage glow, pinned so it stays put on scroll */
+  content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
   background:
     radial-gradient(58% 42% at 50% 6%, rgba(165,56,42,.30), transparent 68%),
     radial-gradient(75% 65% at 50% 42%, rgba(40,31,20,.55), transparent 74%);
@@ -166,7 +166,7 @@ header.scrolled{
 }
 /* flanking ADMIT ONE ticket ribbons */
 .hero-ribbon{
-  position:absolute; top:0; bottom:0; width:46px; z-index:1; pointer-events:none; overflow:hidden;
+  position:fixed; top:0; bottom:0; width:46px; z-index:1; pointer-events:none; overflow:hidden;
   display:flex; align-items:center; justify-content:center;
   background:linear-gradient(var(--red-deep),var(--red),var(--red-deep)); opacity:.14;
 }
