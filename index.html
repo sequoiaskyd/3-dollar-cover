@@ -189,28 +189,22 @@ header.scrolled{
 .ticket-float{ animation:floaty 8s ease-in-out infinite; margin:0 auto 30px; width:min(540px,90vw); }
 .ticket{
   position:relative; display:flex; text-align:left;
-  background:
-    radial-gradient(120% 90% at 100% 0%, rgba(74,50,20,.26), transparent 55%),
-    radial-gradient(80% 70% at 8% 100%, rgba(92,66,32,.24), transparent 60%),
-    radial-gradient(closest-side at 74% 38%, rgba(126,96,52,.20), transparent),
-    radial-gradient(closest-side at 30% 62%, rgba(110,80,42,.16), transparent),
-    linear-gradient(135deg,#ddcca6 0%,#cdb689 55%,#bda578 100%);
-  color:#2f2517; border-radius:8px; transform:rotate(-1.5deg);
-  box-shadow:0 28px 64px rgba(0,0,0,.6), inset 0 2px 0 rgba(255,255,255,.22), inset 0 0 62px rgba(58,38,14,.42);
+  background:linear-gradient(135deg,#efe3c8 0%,#e2cea6 55%,#d3bd93 100%);
+  color:var(--ink); border-radius:8px; transform:rotate(-1.5deg);
+  box-shadow:0 28px 64px rgba(0,0,0,.6), inset 0 2px 0 rgba(255,255,255,.35);
   transition:transform .4s ease;
 }
 .ticket:hover{ transform:rotate(0deg) scale(1.015); }
 .ticket::after{
   content:""; position:absolute; inset:0; border-radius:8px; pointer-events:none;
-  mix-blend-mode:multiply; opacity:.26;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply; opacity:.14;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 .ticket .stub-side{
   position:relative; flex:0 0 48px; border-radius:8px 0 0 8px;
-  background:linear-gradient(160deg,#8a3527,#742a1e 70%,#6a2418);
-  color:#e2d3b2; box-shadow:inset 0 0 22px rgba(0,0,0,.45);
+  background:var(--red); color:#efe3c8;
   display:flex; align-items:center; justify-content:center;
-  border-right:2px dashed rgba(12,11,9,.5);
+  border-right:2px dashed rgba(12,11,9,.45);
 }
 .ticket .stub-side b{
   writing-mode:vertical-rl; transform:rotate(180deg);
@@ -225,10 +219,10 @@ header.scrolled{
 .ticket .stub-side::before{ top:-9px; } .ticket .stub-side::after{ bottom:-9px; }
 .ticket .stub-main{ flex:1; padding:30px 28px 24px; position:relative; z-index:1; text-align:center; }
 .ticket .serial{ position:absolute; top:12px; right:16px; font-family:var(--f-type); font-size:.6rem; letter-spacing:.16em; color:var(--red-deep); }
-.ticket .big{ font-family:var(--f-display); text-transform:uppercase; line-height:.78; font-size:clamp(3.4rem,13vw,5.6rem); color:#26200f; opacity:.9; }
+.ticket .big{ font-family:var(--f-display); text-transform:uppercase; line-height:.78; font-size:clamp(3.4rem,13vw,5.6rem); color:var(--ink); }
 .ticket .cover{ font-family:var(--f-display); text-transform:uppercase; line-height:.85; font-size:clamp(2rem,8vw,3.2rem); letter-spacing:.03em; }
 .ticket .dash{ border-top:2px dashed rgba(12,11,9,.5); margin:14px 0 10px; }
-.ticket .foot{ font-family:var(--f-cond); font-weight:700; text-transform:uppercase; letter-spacing:.05em; font-size:clamp(.6rem,2.5vw,.82rem); color:#3a2e1c; }
+.ticket .foot{ font-family:var(--f-cond); font-weight:700; text-transform:uppercase; letter-spacing:.05em; font-size:clamp(.6rem,2.5vw,.82rem); color:var(--ink); }
 .ticket .foot .r{ color:var(--red); }
 .ticket .foot .s{ color:var(--red); margin:0 .35em; }
 
