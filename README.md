@@ -12,7 +12,8 @@ A single-file static website (`index.html`) with an inline stylesheet and a smal
 
 ```
 index.html      The entire site (HTML + CSS + JS in one file)
-assets/         Images (logo.png, ticket.png, band/gallery photos)
+assets/         Images. Currently: brand.webp (nav wordmark),
+                logo.webp (hero ticket art), mark.webp (unused)
 README.txt      Plain-language editing guide for non-developers
 ```
 
@@ -26,7 +27,16 @@ Just open `index.html` in a web browser.
 
 ## Deployment
 
-Static files served over HTTPS. See the deploy notes / server config for the production setup.
+Live at https://threedollarcover.com over HTTPS (Let's Encrypt, auto-renewing), with a
+301 redirect from HTTP and HSTS enabled.
+
+Since 2026-08-06 the site is served by nginx from a shared host that also serves several
+other sites as separate virtual hosts, rather than from a dedicated instance. Deploying is
+still just copying files: this repo is entirely self-contained (`index.html` plus `assets/`),
+with no build step, so the document root is a copy of the repo contents.
+
+`3dollarcover.com` (without the "three") redirects here via registrar-level domain
+forwarding. That forwarding is HTTP-only, so `https://3dollarcover.com` does not resolve.
 
 ## Credits
 

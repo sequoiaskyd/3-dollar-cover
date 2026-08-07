@@ -10,23 +10,28 @@ README.txt      -> this file
 To view it: double-click index.html and it opens in your web browser.
 
 
-STEP 1: ADD YOUR TWO LOGO IMAGES  (important!)
-----------------------------------------------
-The site is themed around your two artwork images. Save them into the
-"assets" folder with these EXACT names:
+STEP 1: ARTWORK  (mostly done already)
+--------------------------------------
+Two of the three artwork slots are already filled in, so there is nothing
+you need to do for them:
 
-  1. The raven "banknote" image   ->   assets/logo.png
-  2. The torn "Admit One" ticket  ->   assets/ticket.png
+  DONE  assets/brand.webp  -> the red "$3 COVER" wordmark, top-left of
+                              every page
+  DONE  assets/logo.webp   -> the torn "Admit One" ticket, shown large in
+                              the hero at the top of the page
 
-- The raven note shows big in the hero at the top of the page.
-- The ticket shows next to the "Shows" heading.
+STILL MISSING (optional):
 
-If a file is missing, the site still works. It just shows a plain text
-version in that spot instead. (Right now both are missing, so you'll see
-the text fallbacks until you add them.)
+  assets/ticket.png  -> a ticket image shown next to the "Shows" heading
 
-Note: PNG is preferred. If your files are .jpg, either rename them to end
-in .png anyway (usually fine), or tell whoever helps you host it.
+If that file is absent the site simply hides that image and everything
+else looks normal, so you can leave it alone indefinitely.
+
+To replace either of the finished images, drop in a new file with the
+same name. Keep the .webp extension: WebP is what makes the transparent
+background work at a small file size. If you only have a .png or .jpg,
+don't just rename it, since that produces a broken image. Ask for it to
+be converted.
 
 
 STEP 2: FILL IN THE PLACEHOLDERS
@@ -53,10 +58,18 @@ for that email and replace every copy.)
 
 PUTTING IT ONLINE
 -----------------
-This is a plain static website, so it can go on almost any free host:
-  - Netlify  (drag-and-drop the whole folder at app.netlify.com/drop)
-  - GitHub Pages
-  - Cloudflare Pages
-  - Or any web host that lets you upload files.
+It is already online, at:
 
-Just upload the WHOLE folder (index.html + the assets folder together).
+  https://threedollarcover.com
+
+So you do not need to host it anywhere. Edits you make here only reach
+the live site once someone copies the files up to the server, which is
+not automatic.
+
+Typing "3dollarcover.com" (without the "three") also lands on the site.
+That shortcut only works with http, not https.
+
+If you ever DO need to move it somewhere else, it is a plain static
+website and will run on almost any host (Netlify, GitHub Pages,
+Cloudflare Pages, or any web host that accepts uploaded files). Upload
+the WHOLE folder together: index.html plus the assets folder.
